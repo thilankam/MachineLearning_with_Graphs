@@ -32,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Create a new Adapter
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1);
+                android.R.layout.simple_list_item_1, android.R.id.text1); // This is the simple list.
 
         // Assign adapter to ListView
+        // setting the Adapter here...
         listView.setAdapter(adapter);
 
         // Use Firebase to populate the list.
