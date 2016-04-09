@@ -57,13 +57,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        // You need to create a Firebase account at https://www.firebase.com/
+        // After you create your account on firebase, use the account information below.
         // Add items via the Button and EditText at the bottom of the window.
         final EditText text = (EditText) findViewById(R.id.todoText);
         final Button button = (Button) findViewById(R.id.addButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new Firebase("https://amber-torch-5438.firebaseio.com/todoItems")
+                new Firebase("https://amber-torch-5438.firebaseio.com/todoItems") // your Firebase account information here.
                         .push()
                         .child("text")
                         .setValue(text.getText().toString());
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                new Firebase("https://amber-torch-5438.firebaseio.com/todoItems")
+                new Firebase("https://amber-torch-5438.firebaseio.com/todoItems") // Your Firebase Dashboard account info here.
                         .orderByChild("text")
                         .equalTo((String) listView.getItemAtPosition(position))
                         .addListenerForSingleValueEvent(new ValueEventListener() {
