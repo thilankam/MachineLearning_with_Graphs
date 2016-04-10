@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 new Firebase("https://amber-torch-5438.firebaseio.com/todoItems") // your Firebase account information here.
                         .push()
-                        .child("text")
+                        .child("text") // The Text to be added.
                         .setValue(text.getText().toString());
             }
         });
@@ -114,5 +114,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+
+        // I have disabled the MenuItem for this app, just for the simplicity of the app.
     }*/
 }
