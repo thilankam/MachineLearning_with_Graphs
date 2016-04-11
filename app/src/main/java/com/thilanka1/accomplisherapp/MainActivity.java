@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // Use Firebase to populate the list.
         Firebase.setAndroidContext(this);
 
-        new Firebase("https://amber-torch-5438.firebaseio.com/todoItems")
+        new Firebase("https://amber-torch-5438.firebaseio.com/todoItems") // "TodoItems" get updated on cloud here.
                 .addChildEventListener(new ChildEventListener() {
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                         adapter.add((String)dataSnapshot.child("text").getValue());
