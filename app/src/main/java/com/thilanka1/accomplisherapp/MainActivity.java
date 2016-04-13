@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         // Use Firebase to populate the list.
-        Firebase.setAndroidContext(this);
+        Firebase.setAndroidContext(this); // This is for the Android Context.
 
         new Firebase("https://amber-torch-5438.firebaseio.com/todoItems") // "TodoItems" get updated on cloud here.
                 .addChildEventListener(new ChildEventListener() {
