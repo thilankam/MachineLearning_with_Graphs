@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Assign adapter to ListView
         // setting the Adapter here...
-        listView.setAdapter(adapter);
+        listView.setAdapter(adapter); // This is listView. Setting the Adapter for ListView.
 
         // Use Firebase to populate the list.
         Firebase.setAndroidContext(this); // This is for the Android Context.
