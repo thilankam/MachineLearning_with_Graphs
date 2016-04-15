@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get ListView object from xml
-        final ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.listView); // ListView findViewById.
+        // listView Object.
 
         // Create a new Adapter
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Assign adapter to ListView
         // setting the Adapter here...
+        //
         listView.setAdapter(adapter); // This is listView. Setting the Adapter for ListView.
 
         // Use Firebase to populate the list.
