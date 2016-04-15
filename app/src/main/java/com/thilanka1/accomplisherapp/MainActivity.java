@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // Get ListView object from xml
         final ListView listView = (ListView) findViewById(R.id.listView); // ListView findViewById.
         // listView Object.
+        // this listView object has used below.
 
         // Create a new Adapter
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
