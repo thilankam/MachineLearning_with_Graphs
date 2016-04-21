@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         final ListView listView = (ListView) findViewById(R.id.listView); // ListView findViewById.
         // listView Object.
         // this listView object has used below.
+        // This "listView" object can work with other components.
 
         // Create a new Adapter
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
